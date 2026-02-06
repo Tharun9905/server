@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ],
+  "env": {
+    "BREVO_API_KEY": "@brevo_api_key",
+    "BREVO_SENDER_EMAIL": "@brevo_sender_email",
+    "BREVO_SENDER_NAME": "@brevo_sender_name",
+    "BREVO_ADMIN_EMAIL": "@brevo_admin_email",
+    "FRONTEND_URL": "@frontend_url"
+  }
+}
