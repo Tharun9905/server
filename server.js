@@ -53,6 +53,10 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'Server is running' });
 });
 
+app.get('/', (req, res) => {
+  res.json({ status: 'success', message: 'Server started successfully' });
+});
+
 // Send email endpoint
 app.post('/api/send-email', async (req, res) => {
   try {
@@ -181,3 +185,4 @@ app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
   console.log(`📧 Email endpoint: POST http://localhost:${PORT}/api/send-email`);
 });
+
