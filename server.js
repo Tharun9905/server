@@ -15,7 +15,8 @@ const allowedOrigins = [
   'http://localhost:3000',
   'http://localhost:5173',
   'http://127.0.0.1:3000',
-  'http://127.0.0.1:5173'
+  'http://127.0.0.1:5173',
+  'https://www.autoflowmation.ai'
 ].filter(Boolean);
 
 app.use(cors({
@@ -185,4 +186,5 @@ app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
   console.log(`📧 Email endpoint: POST http://localhost:${PORT}/api/send-email`);
 });
+
 
